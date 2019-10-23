@@ -1,5 +1,6 @@
 ﻿using System;
-using System.Reflection;
+using System.Drawing;
+using AutoMapper.Domain.Enumerations;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace AutoMapper.Console
@@ -19,9 +20,11 @@ namespace AutoMapper.Console
             var autoMapper = serviceProvider.GetService<IMapper>();
 
             // Create the source entity...
-            var domainEntity = new AutoMapper.Domain.Models.DomainEntity
+            var domainEntity = new AutoMapper.Domain.Models.DomainEntity("John Doe")
             {
-                Id = Guid.NewGuid()
+                Id = Guid.NewGuid(),
+                Title = Title.Mr,
+                Sex = Sex.Male
             };
 
             // Get AutoMapper to automatically perform the mapping...

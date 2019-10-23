@@ -8,7 +8,8 @@ namespace AutoMapper.Console.Profiles
     {
         public DomainEntityToConsoleEntity()
         {
-            CreateMap<AutoMapper.Domain.Models.DomainEntity, AutoMapper.Console.Models.ConsoleEntity>();
+            CreateMap<AutoMapper.Domain.Models.DomainEntity, 
+                      AutoMapper.Console.Models.ConsoleEntity>();
         }
     }
 }
